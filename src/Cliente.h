@@ -7,9 +7,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "Venta.h"
 
-class Cliente {
+class Venta;
+
+class Cliente{
 private:
     int id;
     std::string nombre;

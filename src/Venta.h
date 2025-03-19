@@ -20,7 +20,6 @@ public:
     void mostrarInfo();
     int calcularTotalVenta();
 
-
 };
 
 
