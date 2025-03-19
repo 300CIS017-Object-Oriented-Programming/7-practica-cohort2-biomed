@@ -138,3 +138,61 @@ Además, deberán crear un método en la clase `Tienda` que permita inicializar 
 - Proyecto funcionando correctamente y compilando sin errores, incluyendo cada una de las funcionalidades solicitadas.
 - Commits periódicos mostrando el avance del proyecto en un repositorio.
 
+
+
+## **Diagrama UML**
+```mermaid
+classDiagram
+
+    class Producto{
+      -int codigo
+      -string nombre
+      -int precio
+      -int stock  
+      +Producto(int codigo, sting nombre, int precio, int stock)
+      +void agregarStock(int cantidad)
+      +void mostrarInfo()
+    }
+    class Cliente{
+      -int id 
+      -string nombre
+      -vector<Venta>ventas
+      +Cliente(int id, string nombre)
+      +void mostrarListaCompra()
+      +void agregarCompra(Venta venta)
+      +int obtenerId()
+    }
+    class Venta{
+      -int idVenta
+      -Cliente cliente
+      -vector<Producto>productos
+      +Venta(Cliente* cliente, int idVenta)
+      +void agregarProductoVendido(Producto* producto, int cantidad)
+      +float calcularTotal()
+      +void mostrarDetallesVenta()
+    }
+    class Tienda{
+      -vector<Producto>productos
+      -vector<Venta>ventas
+      -vector<Cliente>clientes
+      +Tienda()
+      +void mostrarVentas()
+      +void mostrarListaProductos()
+      +void registrarVenta(int idCliente)
+      +float calcularTotalInv()
+      +void mostrarListaClientes()
+      +void reabastecerProducto(string codigoProducto, int cantidad)
+       }
+
+
+
+       Tienda o-- Cliente
+       Tienda o-- Venta
+       Tienda o-- Producto
+       Cliente o-- Venta
+       Venta o-- Producto
+       
+```
+
+        
+
