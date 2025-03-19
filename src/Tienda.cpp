@@ -14,8 +14,7 @@ void Tienda::mostrarListaProductos() {
 void Tienda::registrarVenta(int idCliente) {
 }
 
-float Tienda::calcularTotalInv() {
-}
+//float Tienda::calcularTotalInv() {}
 
 void Tienda::mostrarListaClientes() {
 

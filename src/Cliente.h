@@ -18,7 +18,7 @@ private:
 public:
     Cliente()=default;
     Cliente(int idCliente,std::string nombre);
-    virtual ~Cliente();
+    //virtual ~Cliente();
     int getId();
     void mostrarInfo();
     void mostrarHistorialCompras();

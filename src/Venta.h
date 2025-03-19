@@ -16,7 +16,7 @@ private:
 public:
     Venta();
     Venta(int idVenta, Cliente cliente);
-    ~Venta();
+    //~Venta();
     void mostrarDetallesVenta();
     int calcularTotalVenta();
     void agregarProductoVendido(Producto producto, int cantidad);

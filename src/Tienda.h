@@ -17,7 +17,7 @@ private:
     std::vector<Venta>ventas;
 public:
     Tienda();
-    ~Tienda();
+    //~Tienda();
     void mostrarVentas();
     void mostrarListaProductos();
     void registrarVenta(int idCliente);
