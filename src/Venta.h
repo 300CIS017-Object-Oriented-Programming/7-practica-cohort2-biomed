@@ -13,6 +13,7 @@ private:
     int idVenta;
     Cliente cliente;
     std::vector<Producto> productos;
+    int totalVenta;
 public:
     Venta();
     Venta(int idVenta, Cliente cliente);
@@ -22,7 +23,5 @@ public:
     void agregarProductoVendido(Producto producto, int cantidad);
 
 };
-
-
 
 #endif //VENTA_H
