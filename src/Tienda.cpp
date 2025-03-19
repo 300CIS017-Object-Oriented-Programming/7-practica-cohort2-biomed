@@ -23,6 +23,5 @@ void Tienda::registrarVenta(int idCliente) {
 void Tienda::mostrarListaClientes() {
 
 }
-
 void Tienda::reabastecerProducto(std::string codigoProducto, int cantidad) {
 }
