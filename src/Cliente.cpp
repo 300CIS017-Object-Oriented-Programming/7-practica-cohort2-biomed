@@ -21,14 +21,13 @@ void Cliente::mostrarInfo() {
 }
 
 void Cliente::mostrarHistorialCompras() {
-
-
-
+    for (int i=0;i<compras.size();i++) {
+        compras[i].mostrarDetallesVenta();
+    }
 
 }
 
 void Cliente::agregarVenta(Venta venta) {
-
     compras.push_back(venta);
 
 }

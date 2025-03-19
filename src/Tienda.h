@@ -8,6 +8,7 @@
 
 #include "Cliente.h"
 #include "Producto.h"
+#include "Venta.h"
 
 
 class Tienda {
@@ -17,7 +18,7 @@ private:
     std::vector<Venta>ventas;
 public:
     Tienda();
-    //~Tienda();
+    //virtual ~Tienda();
     void mostrarVentas();
     void mostrarListaProductos();
     void registrarVenta(int idCliente);
