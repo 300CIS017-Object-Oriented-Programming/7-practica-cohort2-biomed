@@ -12,12 +12,12 @@ class Venta;
 
 class Cliente{
 private:
-    int id;
+    int idCliente;
     std::string nombre;
     std::vector<Venta > compras;
 public:
     Cliente()=default;
-    Cliente(int id,std::string nombre);
+    Cliente(int idCliente,std::string nombre);
     virtual ~Cliente();
     int getId();
     void mostrarInfo();

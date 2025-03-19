@@ -3,3 +3,23 @@
 //
 
 #include "Tienda.h"
+
+void Tienda::mostrarVentas() {
+
+}
+
+void Tienda::mostrarListaProductos() {
+}
+
+void Tienda::registrarVenta(int idCliente) {
+}
+
+float Tienda::calcularTotalInv() {
+}
+
+void Tienda::mostrarListaClientes() {
+
+}
+
+void Tienda::reabastecerProducto(std::string codigoProducto, int cantidad) {
+}

@@ -12,13 +12,14 @@ class Venta {
 private:
     int idVenta;
     Cliente cliente;
-    std::vector<Producto*> productos;
+    std::vector<Producto> productos;
 public:
     Venta();
     Venta(int idVenta, Cliente cliente);
     ~Venta();
-    void mostrarInfo();
+    void mostrarDetallesVenta();
     int calcularTotalVenta();
+    void agregarProductoVendido(Producto producto, int cantidad);
 
 };
 

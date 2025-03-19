@@ -20,7 +20,6 @@ public:
     int getCodigoProducto();
     int getStock();
     int getPrecio();
-    void setPrecio(int precioNuevo);
     void agregarStock(int cantidad);
     void descontarStock(int cantidad);
 
