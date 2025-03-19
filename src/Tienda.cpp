@@ -11,7 +11,9 @@ void Tienda::mostrarVentas() {
 }
 
 void Tienda::mostrarListaProductos() {
-
+    for (int i=0;i<productos.size();i++) {
+        productos[i].mostrarInfo();
+    }
 }
 
 void Tienda::registrarVenta(int idCliente) {
@@ -21,7 +23,10 @@ void Tienda::registrarVenta(int idCliente) {
 //float Tienda::calcularTotalInv() {}
 
 void Tienda::mostrarListaClientes() {
-
+    void Tienda::mostrarListaClientes() {
+        for (int i=0;i<clientes.size();i++) {
+            clientes[i].mostrarInfo();
+        }
 }
 void Tienda::reabastecerProducto(std::string codigoProducto, int cantidad) {
 }
