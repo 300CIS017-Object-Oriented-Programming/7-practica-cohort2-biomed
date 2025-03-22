@@ -3,7 +3,7 @@
 //
 
 #include "Tienda.h"
-
+#include "Producto.h"
 void Tienda::mostrarVentas() {
     for (int i=0;i<ventas.size();i++) {
         ventas[i].mostrarDetallesVenta();
@@ -11,35 +11,39 @@ void Tienda::mostrarVentas() {
 }
 
 void Tienda::mostrarListaProductos() {
-    for (int i=0;i<productos.size();i++) {
-        productos[i].mostrarInfo();
+    for (int i = 0; i < productos.size(); i++) {
+        productos[i]->mostrarInfo();
     }
 }
 
 void Tienda::registrarVenta(int idCliente) {
-    for (int i=0;i<clientes.size();i++) {
-        if (idCliente == clientes[i].getId()) {
-            //pendiente
-            //metodo buscar cliente nuevo
-            //crear venta, que productos quiere el cliente, agregarlos
 
-        }else {
-            std::cout<<"No existe cliente con ese número de identificación"<<std::endl;
-        }
-    }
 }
 
 //float Tienda::calcularTotalInv() {}
 
 void Tienda::mostrarListaClientes() {
-    for (int i=0;i<clientes.size();i++) {
+    for (int i = 0; i < clientes.size(); i++) {
         clientes[i].mostrarInfo();
     }
 }
-void Tienda::reabastecerProducto(int codigoProducto, int cantidad) {
-    for (int i=0;i<productos.size();i++) {
-        if (codigoProducto == productos[i].getCodigoProducto()) {
-            productos[i].agregarStock(cantidad);
-        }
+
+void Tienda::reabastecerProducto(std::string codigoProducto, int cantidad) {
+
     }
+
+void Tienda::agregarProducto(int codigo, std::string nombre, int precio, int stock) {
+    productos.push_back(new Producto(codigo, nombre, precio, stock));
 }
+
+Tienda::~Tienda() {
+    for (int i = 0; i < productos.size(); i++) {
+        delete productos[i];
+    }
+    productos.clear();
+}
+
+
+
+
+

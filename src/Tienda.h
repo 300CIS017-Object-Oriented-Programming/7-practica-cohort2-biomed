@@ -13,18 +13,18 @@
 
 class Tienda {
 private:
-    std::vector<Producto> productos;
+    std::vector<Producto*> productos;
     std::vector<Cliente>clientes;
     std::vector<Venta>ventas;
 public:
-    Tienda();
-    //virtual ~Tienda();
+    ~Tienda();
     void mostrarVentas();
     void mostrarListaProductos();
     void registrarVenta(int idCliente);
     float calcularTotalInv();
     void mostrarListaClientes();
-    void reabastecerProducto(int codigoProducto, int cantidad);
+    void reabastecerProducto(std::string codigoProducto, int cantidad);
+    void agregarProducto(int codigo, std::string nombre, int precio, int stock);
 
 
 };
