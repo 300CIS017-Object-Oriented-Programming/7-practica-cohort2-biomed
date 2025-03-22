@@ -24,7 +24,7 @@ public:
     void registrarVenta(int idCliente);
     float calcularTotalInv();
     void mostrarListaClientes();
-    void reabastecerProducto(std::string codigoProducto, int cantidad);
+    void reabastecerProducto(int codigoProducto, int cantidad);
 
 
 };

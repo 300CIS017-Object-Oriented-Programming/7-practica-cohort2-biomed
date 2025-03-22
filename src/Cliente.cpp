@@ -27,7 +27,7 @@ void Cliente::mostrarHistorialCompras() {
 
 }
 
-void Cliente::agregarVenta(Venta venta) {
+void Cliente::agregarVenta(Venta *venta) {
     compras.push_back(venta);
 
 }
