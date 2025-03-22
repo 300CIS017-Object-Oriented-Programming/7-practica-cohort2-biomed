@@ -6,7 +6,7 @@
 #include "Producto.h"
 void Tienda::mostrarVentas() {
     for (int i=0;i<ventas.size();i++) {
-        ventas[i].mostrarDetallesVenta();
+        ventas[i]->mostrarDetallesVenta();
     }
 }
 
@@ -18,17 +18,21 @@ void Tienda::mostrarListaProductos() {
 
 void Tienda::registrarVenta(int idCliente) {
 
+    /*crear un metodo para buscar cliente nuevo
+     *para este metodo se necesita crear una venta, luego seleccionar los productos que el cliente quiere comprar y agregarlos a la venta
+     */
+
 }
 
 //float Tienda::calcularTotalInv() {}
 
 void Tienda::mostrarListaClientes() {
     for (int i = 0; i < clientes.size(); i++) {
-        clientes[i].mostrarInfo();
+        clientes[i]->mostrarInfo();
     }
 }
 
-void Tienda::reabastecerProducto(std::string codigoProducto, int cantidad) {
+void Tienda::reabastecerProducto(int codigoProducto, int cantidad) {
 
     }
 

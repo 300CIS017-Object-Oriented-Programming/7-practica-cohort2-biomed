@@ -14,7 +14,7 @@ class Cliente{
 private:
     int idCliente;
     std::string nombre;
-    std::vector<Venta> compras;
+    std::vector<Venta*> compras;
 public:
     Cliente()=default;
     Cliente(int idCliente,std::string nombre);
@@ -22,7 +22,7 @@ public:
     int getId();
     void mostrarInfo();
     void mostrarHistorialCompras();
-    void agregarVenta(Venta venta);
+    void agregarVenta(Venta* venta);
 
 };
 

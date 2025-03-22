@@ -14,8 +14,8 @@
 class Tienda {
 private:
     std::vector<Producto*> productos;
-    std::vector<Cliente>clientes;
-    std::vector<Venta>ventas;
+    std::vector<Cliente*>clientes;
+    std::vector<Venta*>ventas;
 public:
     ~Tienda();
     void mostrarVentas();
@@ -23,7 +23,7 @@ public:
     void registrarVenta(int idCliente);
     float calcularTotalInv();
     void mostrarListaClientes();
-    void reabastecerProducto(std::string codigoProducto, int cantidad);
+    void reabastecerProducto(int codigoProducto, int cantidad);
     void agregarProducto(int codigo, std::string nombre, int precio, int stock);
 
 
