@@ -145,43 +145,54 @@ Además, deberán crear un método en la clase `Tienda` que permita inicializar 
 classDiagram
 
     class Producto{
-      -int codigo
+      -int codigoProducto
       -string nombre
       -int precio
       -int stock  
-      +Producto(int codigo, sting nombre, int precio, int stock)
+      +Producto(int codigoProducto, string nombre, int precio, int stock)
+      +int getCodigoProducto()
+      +int getStock()
+      +int getPrecio()
       +void agregarStock(int cantidad)
+      +void descontarStock(int cantidad)
       +void mostrarInfo()
     }
     class Cliente{
-      -int id 
+      -int idCliente 
       -string nombre
-      -vector<Venta>ventas
+      -vector<Venta*>compras
+      +Cliente()
       +Cliente(int id, string nombre)
-      +void mostrarListaCompra()
-      +void agregarCompra(Venta venta)
-      +int obtenerId()
+      +int getId()
+      +void mostrarInfo()
+      +void mostrarHistorialCompras()
+      +void agregarVenta(Venta* venta)
+    
     }
     class Venta{
       -int idVenta
-      -Cliente cliente
-      -vector<Producto>productos
+      -Cliente* cliente
+      -vector<Producto*>productos
       +Venta(Cliente* cliente, int idVenta)
       +void agregarProductoVendido(Producto* producto, int cantidad)
-      +float calcularTotal()
+      +int calcularTotalVenta()
+      +void setCliente(Cliente* cliente)
+      +int getIdVenta()
       +void mostrarDetallesVenta()
     }
     class Tienda{
-      -vector<Producto>productos
-      -vector<Venta>ventas
-      -vector<Cliente>clientes
+      -vector<Producto*>productos
+      -vector<Venta*>ventas
+      -vector<Cliente*>clientes
+      -void inicializarDatos()
       +Tienda()
       +void mostrarVentas()
       +void mostrarListaProductos()
       +void registrarVenta(int idCliente)
-      +float calcularTotalInv()
+      +int calcularTotalInv()
       +void mostrarListaClientes()
-      +void reabastecerProducto(string codigoProducto, int cantidad)
+      +void reabastecerProducto(int codigoProducto, int cantidad)
+      +void agregarProducto(int codigo,string nombre, int precio,int stock)
        }
 
 
@@ -191,6 +202,7 @@ classDiagram
        Tienda o-- Producto
        Cliente o-- Venta
        Venta o-- Producto
+       Venta --> Cliente
        
 ```
 
