@@ -16,12 +16,14 @@ private:
     std::vector<Producto*> productos;
     std::vector<Cliente*>clientes;
     std::vector<Venta*>ventas;
+    void inicializarDatos();
 public:
+    Tienda();
     ~Tienda();
     void mostrarVentas();
     void mostrarListaProductos();
     void registrarVenta(int idCliente);
-    float calcularTotalInv();
+    int calcularTotalInv();
     void mostrarListaClientes();
     void reabastecerProducto(int codigoProducto, int cantidad);
     void agregarProducto(int codigo, std::string nombre, int precio, int stock);

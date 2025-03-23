@@ -9,8 +9,9 @@ void mostrarMenu() {
     std::cout << "4. Mostrar Ventas" << std::endl;
     std::cout << "5. Mostrar Lista de Clientes" << std::endl;
     std::cout << "6. Reabastecer Producto" << std::endl;
-    std::cout << "7. Salir" << std::endl;
-    std::cout << "Seleccione una opción: ";
+    std::cout << "7. Calcular total del inventario" << std::endl;
+    std::cout << "0. Salir" << std::endl;
+    std::cout << "Seleccione una opcion: ";
 }
 
 int main() {
@@ -70,6 +71,12 @@ int main() {
                 break;
             }
             case 7:
+                std::cout << "\nCalculo del total del inventario:\n";
+                std::cout << "El total del inventario de la tienda es de: $" << std::endl;
+                miTienda.calcularTotalInv();
+            break;
+
+            case 0:
                 std::cout << "Saliendo del Programa...\n";
                 break;
             default:

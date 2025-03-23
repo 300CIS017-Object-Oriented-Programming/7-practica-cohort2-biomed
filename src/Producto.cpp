@@ -12,7 +12,8 @@ Producto::Producto(int codigoProducto, std::string nombre, int precio, int stock
 }
 
 void Producto::mostrarInfo() {
-    std::cout << "Codigo: " << this->codigoProducto << std::endl;
+    std::cout << "La siguiente es la información del producto solicitado: \n" << std::endl;
+    std::cout << "Codigo: " << this->codigoProducto <<std::endl;
     std::cout << "Nombre: " << this->nombre << std::endl;
     std::cout << "Precio: " << this->precio << std::endl;
     std::cout << "Stock: " << this->stock << std::endl;

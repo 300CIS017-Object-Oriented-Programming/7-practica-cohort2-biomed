@@ -17,10 +17,11 @@ private:
 public:
     Venta();
     Venta(int idVenta, Cliente* cliente);
-    //~Venta();
     void mostrarDetallesVenta();
     int calcularTotalVenta();
     void agregarProductoVendido(Producto* producto, int cantidad);
+    void setCliente(Cliente *cliente);
+    int getIdVenta();
 
 };
 
