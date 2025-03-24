@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/imC5X1HD)
 # Sistema de Gestión de Ventas e Inventario para una Tienda Ecológica
 
 ## 🌱 Introducción y Motivación
@@ -136,4 +137,74 @@ Además, deberán crear un método en la clase `Tienda` que permita inicializar 
 - Un archivo `main.cpp` que permita interactuar con el sistema mediante un menú claro y funcional.
 - Proyecto funcionando correctamente y compilando sin errores, incluyendo cada una de las funcionalidades solicitadas.
 - Commits periódicos mostrando el avance del proyecto en un repositorio.
+
+
+
+## **Diagrama UML**
+```mermaid
+classDiagram
+
+    class Producto{
+      -int codigoProducto
+      -string nombre
+      -int precio
+      -int stock  
+      +Producto(int codigoProducto, string nombre, int precio, int stock)
+      +int getCodigoProducto()
+      +int getStock()
+      +int getPrecio()
+      +void agregarStock(int cantidad)
+      +void descontarStock(int cantidad)
+      +void mostrarInfo()
+    }
+    class Cliente{
+      -int idCliente 
+      -string nombre
+      -vector<Venta*>compras
+      +Cliente()
+      +Cliente(int id, string nombre)
+      +int getId()
+      +void mostrarInfo()
+      +void mostrarHistorialCompras()
+      +void agregarVenta(Venta* venta)
+    
+    }
+    class Venta{
+      -int idVenta
+      -Cliente* cliente
+      -vector<Producto*>productos
+      +Venta(Cliente* cliente, int idVenta)
+      +void agregarProductoVendido(Producto* producto, int cantidad)
+      +int calcularTotalVenta()
+      +void setCliente(Cliente* cliente)
+      +int getIdVenta()
+      +void mostrarDetallesVenta()
+    }
+    class Tienda{
+      -vector<Producto*>productos
+      -vector<Venta*>ventas
+      -vector<Cliente*>clientes
+      -void inicializarDatos()
+      +Tienda()
+      +void mostrarVentas()
+      +void mostrarListaProductos()
+      +void registrarVenta(int idCliente)
+      +int calcularTotalInv()
+      +void mostrarListaClientes()
+      +void reabastecerProducto(int codigoProducto, int cantidad)
+      +void agregarProducto(int codigo,string nombre, int precio,int stock)
+       }
+
+
+
+       Tienda o-- Cliente
+       Tienda o-- Venta
+       Tienda o-- Producto
+       Cliente o-- Venta
+       Venta o-- Producto
+       Venta --> Cliente
+       
+```
+
+        
 
