@@ -13,8 +13,8 @@ void Tienda::inicializarDatos() {
     Producto *producto2 = new Producto(2,"Zanahoria",3000, 100);
     Producto *producto3 = new Producto(3,"Brocoli",4000,100);
     Producto *producto4 = new Producto(4,"Aguacate",6000,100);
-    Producto *producto5 = new Producto(3,"Cebolla",3200,100);
-    Producto *producto6 = new Producto(4,"Naranja",2000,100);
+    Producto *producto5 = new Producto(5,"Cebolla",3200,100);
+    Producto *producto6 = new Producto(6,"Naranja",2000,100);
     Venta *venta1 = new Venta(32,nullptr);
     Venta *venta2 = new Venta(33,nullptr);
     Venta *venta3 = new Venta(34,nullptr);
@@ -31,6 +31,7 @@ void Tienda::inicializarDatos() {
     // Incluir las ventas en el vector y determinar los clientes correspondientes y productos
     venta1->setCliente(cliente1);
     venta2->setCliente(cliente2);
+    venta3->setCliente(cliente2);
     venta1->agregarProductoVendido(producto1,15);
     venta1->agregarProductoVendido(producto2,15);
     venta2->agregarProductoVendido(producto3,20);
@@ -133,14 +134,6 @@ void Tienda::registrarVenta(int idCliente) {
         }
 
     }
-
-
-
-
-
-    /*crear un metodo para buscar cliente nuevo
-     *para este metodo se necesita crear una venta, luego seleccionar los productos que el cliente quiere comprar y agregarlos a la venta
-     */
 
 }
 

@@ -72,8 +72,7 @@ int main() {
             }
             case 7:
                 std::cout << "\nCalculo del total del inventario:\n";
-                std::cout << "El total del inventario de la tienda es de: $" << std::endl;
-                miTienda.calcularTotalInv();
+                std::cout << "El total del inventario de la tienda es de: $" << miTienda.calcularTotalInv() <<std::endl;
             break;
 
             case 0:
@@ -83,7 +82,7 @@ int main() {
                 std::cout << "Opcion no valida!\n";
                 break;
         }
-    } while (opcion != 7);
+    } while (opcion != 0);
 
     return 0;
 }
