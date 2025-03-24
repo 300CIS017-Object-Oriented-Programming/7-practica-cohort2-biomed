@@ -15,10 +15,9 @@ int Cliente::getId() {
 }
 
 void Cliente::mostrarInfo() {
-    std::cout << "\n----------\n" << std::endl;
+    std::cout << std::endl;
     std::cout << "Cliente: " << this->nombre << std::endl;
     std::cout << "Id: " << this->idCliente << std::endl;
-    std::cout << "\n----------\n" << std::endl;
 
 }
 

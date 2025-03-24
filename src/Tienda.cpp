@@ -76,7 +76,7 @@ void Tienda::mostrarListaProductos() {
 void Tienda::registrarVenta(int idCliente) {
 
     int idVenta = 0;
-    std::cout<< "Digite el número de identificación de la nueva venta: "<<std::endl;
+    std::cout<< "Digite el numero de identificacion de la nueva venta: "<<std::endl;
     std::cin >> idVenta;
     int bandera=0;
     for (int i=0;i<ventas.size();i++) {
@@ -94,11 +94,11 @@ void Tienda::registrarVenta(int idCliente) {
                 clientes[i]->agregarVenta(ventaNueva);
                 int bandera1=0;
 
-                do {
+                while (bandera1 == 0){
                     int opcion=0;
                     std::cout << "\n-----POR FAVOR SELECCIONE UNA OPCION PARA COMPLETAR LA CREACION DE LA VENTA-----" << std::endl;
                     std::cout << "1. Agregar producto a la venta" << std::endl;
-                    std::cout << "2. Terminar creaciond de venta " << std::endl;
+                    std::cout << "2. Terminar creacion de venta " << std::endl;
                     std::cin >> opcion;
 
                     switch (opcion) {
@@ -106,29 +106,30 @@ void Tienda::registrarVenta(int idCliente) {
                         case 1: {
 
                             int idProducto = 0;
-                            std::cout << "Por favor digite el código del producto que desea agregar a la venta: "<<std::endl;
+                            std::cout << "Por favor digite el codigo del producto que desea agregar a la venta: "<<std::endl;
                             std::cin >> idProducto;
 
                             for (int i=0;i<productos.size();i++) {
 
                                 if (idProducto == productos[i]->getCodigoProducto()) {
                                     int cantProducto =0;
-                                    std::cout << "Por favor digite cuántas unidades del producto se desean agregar a la venta: "<<std::endl;
+                                    std::cout << "Por favor digite cuantas unidades del producto se desean agregar a la venta: "<<std::endl;
                                     std::cin >> cantProducto;
                                     ventaNueva->agregarProductoVendido(productos[i],cantProducto);
                                 }
+
                             }
+                            break;
 
                         }
                         case 2:
                             ventaNueva->mostrarDetallesVenta();
                             ventas.push_back(ventaNueva);
-
                             std::cout << "Venta agregada al inventario de forma exitosa!!" <<std::endl;
-                            bandera1++;
+                            bandera1=1;
 
                     }
-                }while (bandera1 == 0);
+                }
 
             }
         }

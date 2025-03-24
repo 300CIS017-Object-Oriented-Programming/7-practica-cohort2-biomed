@@ -10,13 +10,13 @@ Venta::Venta(int idVenta, Cliente* cliente) {
 }
 
 void Venta::mostrarDetallesVenta() {
-    std::cout << "\n----------\n" << std::endl;
+    std::cout << std::endl;
     std::cout << "ID venta: " << idVenta << std::endl;
     cliente->mostrarInfo();
     for (int i=0; i < productos.size(); i++) {
         productos[i]->mostrarInfo();
     }
-    std::cout << "\n----------\n" << std::endl;
+
 }
 
 int Venta::calcularTotalVenta() {
